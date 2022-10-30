@@ -1,2 +1,2 @@
-# simpleusers
-simple yaml based user package
+# pysubsonic
+Yet another attempt at subsonic api in python

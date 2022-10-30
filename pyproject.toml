@@ -3,10 +3,10 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "simpleusers"
-version = "0.0.6"
+name = "pysubsonic"
+version = "0.0.1"
 authors = [
-  { name="Matt C", email="matt@tar.black" },
+  { name="Matt C", email="matt@xhec.dev" },
 ]
 description = "A small user db library"
 readme = "README.md"
@@ -17,11 +17,12 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
-dependencuies = [
-    "PyYAML",
-    "passlib"
+dependencies = [
+    "requests",
+    "lxml",
+    "beautifulsoup4"
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/SomethingGeneric/simpleusers"
-"Bug Tracker" = "https://github.com/SomethingGeneric/simpleusers/issues"
+"Homepage" = "https://gitea.xhec.dev/matt/pysubsonic"
+"Bug Tracker" = "https://gitea.xhec.dev/matt/pysubsonic/issues"
