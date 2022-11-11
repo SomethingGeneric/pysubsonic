@@ -38,6 +38,9 @@ class pysubsonic:
         for elem in song_elements:
             ids.append(elem['id'])
         return ids
+    def get_playlists(self, username=None):
+        extra = f"username={username}" if username is not None else ""
+        return self.do_request("getPlaylists", extra)
     def create_playlist(self, id=None, name=None, songid=None):
         params = f"playlistId={id}" if id is not None else ""
         params += f"&name={name}" if name is not None else ""
@@ -51,8 +54,4 @@ if __name__ == "__main__":
     import getpass
     passw = getpass.getpass(prompt="Password: ")
     p = pysubsonic("https://music.xhec.dev", "matt", passw)
-    song_id = p.get_song_ids("Such Great Heights")[0]
-
-    xml = p.create_playlist(name="Test Playlist")
-    pl_id = p.parse_playlist_id(xml)
-    print(f"Created Test Playlist: {pl_id}")
+    print(p.get_playlists())
