@@ -4,11 +4,11 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pysubsonic"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="Matt C", email="matt@xhec.dev" },
 ]
-description = "A small user db library"
+description = "Mostly (in)complete subsonic api"
 readme = "README.md"
 license = { file="LICENSE" }
 requires-python = ">=3.7"
