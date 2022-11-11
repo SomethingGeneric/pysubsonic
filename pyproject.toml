@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pysubsonic"
-version = "0.0.5"
+version = "0.0.6"
 authors = [
   { name="Matt C", email="matt@xhec.dev" },
 ]
