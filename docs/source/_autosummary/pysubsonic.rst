@@ -1,0 +1,5 @@
+﻿pysubsonic
+==========
+
+.. automodule:: pysubsonic
+    :members:
