@@ -46,6 +46,9 @@ class pysubsonic:
         params += f"&name={name}" if name is not None else ""
         params += f"&songId={songid}" if songid is not None else ""
         return self.do_request("createPlaylist", params)
+    def update_playlist(self, playlistId, songIdToAdd):
+        params = f"playlistId={playlistId}&songIdToAdd={songIdToAdd}"
+        return self.do_request("updatePlaylist", params)
     def get_playlist_id_by_name(self, name, username=None):
         data = self.get_playlists(username=username)
         soup = BeautifulSoup(data, 'xml')
@@ -62,4 +65,5 @@ if __name__ == "__main__":
     import getpass
     passw = getpass.getpass(prompt="Password: ")
     p = pysubsonic("https://music.xhec.dev", "matt", passw)
+    p.create_playlist(name="e")
     print(p.get_playlist_id_by_name('e'))
