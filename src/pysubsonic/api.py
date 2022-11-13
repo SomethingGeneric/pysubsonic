@@ -93,11 +93,3 @@ class pysubsonic:
         soup = BeautifulSoup(response_data, 'xml')
         pl = soup.find_all('playlist')[0]
         return pl['id']
-if __name__ == "__main__":
-    import getpass
-    passw = getpass.getpass(prompt="Password: ")
-    p = pysubsonic("https://music.xhec.dev", "matt", passw)
-    if p.check_song_in_playlist('Burn', 'Burned Out'):
-        print("yay!")
-    else:
-        print(":(")
